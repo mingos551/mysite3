@@ -123,44 +123,44 @@ st.title('熱量比較アプリ')
 
 fuel_names = [v["name"] for v in fuel_data.values()]
 
-with st.sidebar:
-    st.write('条件を入力してください')
-    selected_fuel = st.selectbox(
-    '現在ご利用中のエネルギーを選択してください',
-    options=fuel_names)
+
+st.write('条件を入力してください')
+selected_fuel = st.selectbox(
+'現在ご利用中のエネルギーを選択してください',
+options=fuel_names)
+
+st.write("""
+        選択したエネルギーのご使用量、単価をご入力ください
+        """)
+
+month = '月間使用量で入力'
+year = '年間使用量で入力'
+volume_unit = ""
+selected_key = find_key_by_name(fuel_data, selected_fuel)
+selected_material = fuel_data[selected_key]["material"]
+selected_unit = fuel_data[selected_key]["unit"]
+
+
     
-    st.write("""
-         選択したエネルギーのご使用量、単価をご入力ください
-         """)
+month_year = st.radio("", [month, year], label_visibility="collapsed")
+quantity = st.number_input(
+'使用量',
+step=(1)
+)
+if selected_material == "石油":
+    volume_unit = st.selectbox("単位", options=["L", "kL"])
+    if volume_unit == "kL":
+                quantity = quantity * 1000
+                selected_unit = "kL"
 
-    month = '月間使用量で入力'
-    year = '年間使用量で入力'
-    volume_unit = ""
-    selected_key = find_key_by_name(fuel_data, selected_fuel)
-    selected_material = fuel_data[selected_key]["material"]
-    selected_unit = fuel_data[selected_key]["unit"]
-
-
-        
-    month_year = st.radio("", [month, year], label_visibility="collapsed")
-    quantity = st.number_input(
-    '使用量',
-    step=(1)
-    )
-    if selected_material == "石油":
-        volume_unit = st.selectbox("単位", options=["L", "kL"])
-        if volume_unit == "kL":
-                    quantity = quantity * 1000
-                    selected_unit = "kL"
-
-    price = st.number_input('単価',
-                step=(1))
-    
+price = st.number_input('単価',
+            step=(1))
 
 
 
-
-
+st.write(f'''
+    計算条件
+''')
 
 
 
