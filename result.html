@@ -1,0 +1,588 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="ja" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type"  content="text/css" />
+<link rel="shortcut icon" href="/icon/favicon.ico">
+<title>株式会社ジャパンガスエナジー｜会員サイト｜燃転コンテンツ｜燃転電卓</title>
+<meta name="ROBOTS" CONTENT="ALL">
+<meta name="description" content="輸入、販売等の事業概要、プロパン・ブタン・オートガスの用途やLPガス車紹介。">
+<meta name="keywords" content="LPガス,lp,LPG,ガス,東京ガス,機器,ジャパンガスエナジー,ガスコンロ,燃料電池,LPG車,プロパン,ブタン,価格,料金,高圧,業界,ニュース,CP価格,JGE">
+<meta name="copyright" content="All Rights Reserved by JAPAN GAS ENERGY CORPORATION JGE" />
+<meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1" />
+<link rel="stylesheet" media="all" href="/common/css/basic.css" type="text/css" id="style_type" />
+
+
+<script type="text/javascript" src="/common/js/jquery.191.js"></script>
+<script type="text/javascript" src="/common/js/smoothrollover.js"></script>
+<script type="text/javascript" src="/common/js/hover.js"></script>
+<script type="text/javascript" src="/common/js/top.js"></script>
+<script type="text/javascript" src="/common/js/jqueryAutoHeight.js"></script>
+<script type="text/javascript" src="/common/js/jquery.js"></script>
+<script type="text/javascript" src="/common/js/mobile_switch.js"></script>
+<script type="text/javascript" src="/sp_common/js/smart_jquery.js"></script>
+<script type="text/javascript" src="/sp_common/js/jquery.mobile-menu.js"></script>
+<script type="text/javascript" src="/sp_common/js/simplebar.js"></script>
+<script type="text/javascript" src="https://polyfill.io/v3/polyfill.min.js?features=String.prototype.startsWith"></script>
+<script type="text/javascript" src="https://polyfill.io/v3/polyfill.min.js?features=Element.prototype.remove"></script>
+<link rel="stylesheet" media="all" href="/sp_common/css/simplebar.css" type="text/css">
+
+<script>
+        
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-61631909-1', 'auto');
+  ga('send', 'pageview');
+        
+
+</script>
+<script type="text/javascript" src="/common/js/ga_event.js"></script>    <script type="text/javascript" src="/common/js/tabmenu.js"></script>
+
+    <script type="text/javascript">
+        var selected_energy_period = '1';
+        
+        $(function(){
+            var bg_red = $("tr.bg_red");
+            var tr_id = bg_red.attr('id');
+            if(tr_id=='1' || tr_id=='2') {
+                $("td.propane").css('background-color',bg_red.css('background-color'));
+            }
+
+            if(selected_energy_period==2) {
+                $("li.tab_year").find('a').click();
+            }
+        });
+        
+    </script>
+</head>
+
+
+<body id="page_top">
+<!-- Start-wrapper -->
+<div id="wrapper">
+
+    <!-- =================== header SSI ====================== -->
+    <!-- ****************Start-header**************** -->
+    <div class="header">
+<div class="inner">
+<div class="left">
+<div><img src="/common/images/logo_cruse.gif" width="178" height="53" alt="CRUSE" /></div>
+<div class="text_partner"><img src="/common/images/test_partner.png" width="345" height="31" alt="最強のパートナーシップを目指して" /></div>
+</div>
+<div class="right">
+<p class="link_web"><a href="http://www.j-gasenergy.co.jp/" target="_blank" class="normal_link">株式会社ジャパンガスエナジー<br />WEBサイトはこちら</a></p>
+<p class="btn_logout"><a href="/logout.php"><img src="/common/images/btn_logout.png" width="66" height="32" alt="ログアウト" class="hover" /></a></p>
+<p class="logo_jge"><img src="/common/images/logo_jge.gif" width="318" height="42" alt="株式会社ジャパンガスエナジー" /></p>
+</div>
+</div>
+</div>    <!-- ****************END-header**************** -->
+    <!-- =================== /header SSI ====================== -->
+
+    <!-- =================== gnavi SSI ====================== -->
+    <!-- ****************Start-gnavi**************** -->
+    <div class="gnavi">
+<div class="inner">
+<ul>
+<li><a href="/index.html" target="_self"><img src="/common/images/gnavi01_off.png" alt="HOME" width="192" height="57" /></a></li>
+<li><a href="/report/index.html" target="_self"><img src="/common/images/gnavi02_off.png" width="192" height="57" alt="国際レポート" /></a></li>
+<li><a href="/training/index.html" target="_self"><img src="/common/images/gnavi03_off.png" width="190" height="57" alt="研修会情報" /></a></li>
+<li><a href="/nenten/index.html" target="_self"><img src="/common/images/gnavi04_on.png" width="193" height="57" alt="燃転コンテンツ" /></a></li>
+<li><a href="/information/index.html" target="_self"><img src="/common/images/gnavi05_off.png" alt="注目情報" width="193" height="57" /></a></li>
+</ul>
+</div>
+</div>    <!-- ****************END-gnavi**************** -->
+
+    <!-- =================== /gnavi SSI ====================== -->
+
+    <!-- =================== smart_header SSI ====================== -->
+    <!-- ****************Start-smart header**************** -->
+    <div class="smart_header">
+<span class="logo"><a href="/"><img src="/sp_common/images/logo.png" alt="CRUSE 最強のパートナーシップを目指して 株式会社ジャパンガスエナジー" /></a></span>
+<span class="menu" id="mobile-bar"></span>
+
+<div id="main-nav">
+<div id="nav_box">
+
+<ul class="accordion">
+<li>
+    <p class="ttl_report"><span>国際レポート</span></p>
+    <!-- ajaxでここに年度リストが埋め込まれる-->
+
+</li>
+<li>
+    <p class="ttl_training"><span>研修会情報</span></p>
+    <ul>
+    <li><a href="/training/index.html">研修プログラム一覧</a></li>
+    <li><a href="/training/report2022/index.html">研修会開催レポート</a></li>
+	<li><a href="/training/report2022/index.html">2022年度 研修会</a></li>
+	<li><a href="/training/report2021/index.html">2021年度 研修会</a></li>
+	<li><a href="/training/report2019/index.html">2019年度 研修会</a></li>
+	<li><a href="/training/report2018/index.html">2018年度 研修会</a></li>
+	<li><a href="/training/report2017/index.html">2017年度以前の研修会</a></li>
+	</ul>
+</li>
+<li>
+    <p class="ttl_nenten"><span>燃転コンテンツ</span></p>
+    <ul>
+    <li><a href="/nenten/subsidy.html">補助金情報</a></li>
+    <li><a href="/nenten/subsidy_movie.html">基調講演「補助金活用事例」</a></li>
+    <li><a href="/nenten/generator_movie.html">非常用発電機実機紹介</a></li>
+    <li><a href="/nenten/calculator/index.html">燃転電卓</a></li>
+    <li><a href="/nenten/nenten.html">NenTenキャンペーン</a></li>
+    <li><a href="/nenten/ecoten.html">エコTENキャンペーン</a></li>
+    <li><a href="/nenten/example/index.html">燃転事例紹介</a></li>
+    <li><a href="/nenten/torikumi/index.html">燃転・営業活動への取り組み</a></li>
+    <!-- <li><a href="/nenten/sales/index.html">営業活動事例</a></li> -->
+	</ul>
+</li>
+<li class="ttl_information">
+	<a href="/information/index.html">注目情報</a>
+</li>
+<li class="ttl_calculator">
+	<a href="/nenten/calculator/index.html">燃転電卓</a>
+</li>
+</ul>
+
+<p id="btn_logout_sp"><a href="/logout.php"><img src="/sp_common/images/btn_logout.png" width="178" height="50" alt="ログアウト" /></a></p>
+
+<p id="build_menu_close" class="close_btn"><img src="/sp_common/images/btn_close.png" alt="close" /></p>
+
+</div>
+</div>
+</div>    <!-- ****************END-smart header**************** -->
+
+    <!-- =================== /smart_header SSI ====================== -->
+
+    <!-- ****************Start-main_box**************** -->
+    <div class="main_box second">
+
+        <!--**************** Start-inner**************** -->
+        <div class="inner">
+
+            <!-- Start-pankuz -->
+            <p class="pankuz"><a href="../../index.html">HOME&nbsp;</a>&gt;&nbsp;<a href="../index.html">燃転コンテンツ</a>&nbsp;&gt;&nbsp;燃転電卓</p>
+            <!-- /pankuz -->
+
+            <!-- Start-left -->
+            <div class="left">
+                <h1 class="normal_long"><span class="bg_top"></span><span>燃転電卓</span></h1>
+
+                <h2 class="result"><img src="../../common/images/ttl_result.png" width="638" height="67" alt="計算結果" /></h2>
+                <!-- **************** print ****************-->
+                <p class="print_result">計算結果</p>
+                <!-- **************** print ****************-->
+
+                <div class="inner_box02">
+                    <p class="icon_condition">現在のご利用状況</p>
+                    <div class="table_condition">
+                        <table>
+                            <tr>
+                                <td class="ttl" rowspan="2">入力内容</td>
+                                <td class="ttl02 dot_btm">ご利用エネルギー</td>
+                                <td class="result dot_btm">軽油</td>
+                            </tr>
+                            <tr>
+                                <td class="ttl02">ご使用量（月間）</td>
+                                <td class="result">11L 1,111円（税抜）</td>
+                            </tr>
+                            <tr>
+                                <td class="ttl" rowspan="2">月間発熱量・CO<sub class="normal_sub">2</sub>排出量</td>
+                                <td class="ttl02 dot_btm">発熱量（MJ）</td>
+                                <td class="result dot_btm"><span class="high">高位 418 /</span><span class="low">低位 393</span></td>
+                            </tr>
+                            <tr>
+                                <td class="ttl02">CO<sub class="normal_sub">2</sub>排出量</td>
+                                <td class="result">8kg</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <!--********* energyz *********-->
+                <div class="energyz">
+                    <div class="ttl_energy"><span class="icon_circle_arr"><img src="../../common/images/icon_circle_arr.png" width="68" height="71" /></span>
+                        <h3>同等発熱量を得るための各エネルギー使用量、CO<sub class="normal_sub">2</sub>排出量比較</h3></div>
+
+                    <div class="energyz_inner">
+
+                        <!--********* ui-tab *********-->
+                        <div id="tabnavi">
+                            <ul>
+                                <li class="tab_month"><a href="#result_month"></a></li>
+                                <li class="tab_year"><a href="#result_year"></a></li>
+                            </ul>
+                        </div>
+
+                        <div id="tabcontent">
+                            <!--********* result_month*********-->
+
+                                                        <div id="result_month">
+                                <!-- **************** print ****************-->
+                                                                    <p class="print_result_month">月間の場合</p>
+                                                                <!-- **************** print ****************-->
+
+                                <div class="table10" data-simplebar data-simplebar-auto-hide="false">
+                                    <table width="0" border="0">
+                                        <tr class="ttl">
+                                            <td colspan="4" rowspan="2">燃料</td>
+                                            <td rowspan="2">月間<span class="break">使用量</span></td>
+                                            <td rowspan="2">同等<span class="break">単価</span><span class="sub">（税抜）</span></td>
+                                            <td colspan="2">CO<sub class="normal_sub">2</sub></td>
+                                        </tr>
+                                        <tr class="ttl">
+                                            <td>量</td>
+                                            <td>差</td>
+                                        </tr>
+
+                                                                                <tr id="1" class="b_btm_dot  ">
+                                                                                            <td rowspan="6" class="energy lpgas">LPガス</td>
+                                                <td class="energy02 propane" rowspan="4">プロパン</td>
+                                                <td class="amount b_btm_dot_reset" rowspan="2">kg</td>
+                                                                                        <td class="grade">高位</td>
+                                            <td class="month_rate "       >8</td>
+                                            <td class="number_equality "  >1,528</td>
+                                            <td class="number_quantity "  >7</td>
+                                            <td class="number_difference  red">-1</td>
+                                        </tr>
+                                        <tr class="">
+                                            <td class="grade">低位</td>
+                                                                                        <td class="month_rate">8</td>
+                                            <td class="number_equality">1,528</td>
+                                            <td class="number_quantity">7</td>
+                                                                                        <td class="number_difference red">-1</td>
+                                        </tr>
+                                                                                <tr id="2" class="b_btm_dot  ">
+                                                                                            <td rowspan="2" class="b_btm_dot_reset">m<sup class="normal_sup">3</sup><br /><span class="sub">(低圧)</span></td>
+                                                                                        <td class="grade">高位</td>
+                                            <td class="month_rate "       >4</td>
+                                            <td class="number_equality "  >3,055</td>
+                                            <td class="number_quantity "  >7</td>
+                                            <td class="number_difference  red">-1</td>
+                                        </tr>
+                                        <tr class="">
+                                            <td class="grade">低位</td>
+                                                                                        <td class="month_rate">4</td>
+                                            <td class="number_equality">3,055</td>
+                                            <td class="number_quantity">7</td>
+                                                                                        <td class="number_difference red">-1</td>
+                                        </tr>
+                                                                                <tr id="3" class="b_btm_dot b_btm_dot_reset ">
+                                                                                            <td rowspan="2" class="energy02 butane">ブタン</td>
+                                                <td rowspan="2" class="amount b_btm_dot_reset">kg</td>
+                                                                                        <td class="grade">高位</td>
+                                            <td class="month_rate "       >8</td>
+                                            <td class="number_equality "  >1,528</td>
+                                            <td class="number_quantity "  >7</td>
+                                            <td class="number_difference  red">-1</td>
+                                        </tr>
+                                        <tr class="">
+                                            <td class="grade">低位</td>
+                                                                                        <td class="month_rate">9</td>
+                                            <td class="number_equality">1,358</td>
+                                            <td class="number_quantity">7</td>
+                                                                                        <td class="number_difference red">-1</td>
+                                        </tr>
+                                                                                <tr id="4" class="b_btm_dot  ">
+                                                                                            <td class="energy sekiyu" rowspan="6">石油</td>
+                                                <td rowspan="2" class="energy02 toyu">灯油</td>
+                                                <td rowspan="2" class="amount b_btm_dot_reset">L</td>
+                                                                                        <td class="grade">高位</td>
+                                            <td class="month_rate "       >11</td>
+                                            <td class="number_equality "  >1,111</td>
+                                            <td class="number_quantity "  >8</td>
+                                            <td class="number_difference  ">0</td>
+                                        </tr>
+                                        <tr class="">
+                                            <td class="grade">低位</td>
+                                                                                        <td class="month_rate">11</td>
+                                            <td class="number_equality">1,111</td>
+                                            <td class="number_quantity">8</td>
+                                                                                        <td class="number_difference ">0</td>
+                                        </tr>
+                                                                                <tr id="5" class="b_btm_dot  bg_red">
+                                                                                            <td rowspan="2" class="energy02 keiyu">軽油</td>
+                                                <td rowspan="2" class="amount b_btm_dot_reset">L</td>
+                                                                                        <td class="grade">高位</td>
+                                            <td class="month_rate b_btm_dot_reset"       rowspan="2">11</td>
+                                            <td class="number_equality b_btm_dot_reset"  rowspan="2">1,111</td>
+                                            <td class="number_quantity b_btm_dot_reset"  rowspan="2">8</td>
+                                            <td class="number_difference b_btm_dot_reset ">-</td>
+                                        </tr>
+                                        <tr class="bg_red">
+                                            <td class="grade">低位</td>
+                                                                                        <td class="number_difference ">-</td>
+                                        </tr>
+                                                                                <tr id="6" class="b_btm_dot  ">
+                                                                                            <td rowspan="2" class="energy02 ajyuyu">A重油</td>
+                                                <td rowspan="2" class="amount b_btm_dot_reset">L</td>
+                                                                                        <td class="grade">高位</td>
+                                            <td class="month_rate "       >11</td>
+                                            <td class="number_equality "  >1,111</td>
+                                            <td class="number_quantity "  >8</td>
+                                            <td class="number_difference  ">0</td>
+                                        </tr>
+                                        <tr class="">
+                                            <td class="grade">低位</td>
+                                                                                        <td class="month_rate">11</td>
+                                            <td class="number_equality">1,111</td>
+                                            <td class="number_quantity">8</td>
+                                                                                        <td class="number_difference ">0</td>
+                                        </tr>
+                                                                                <tr id="7" class="b_btm_dot  ">
+                                                                                            <td rowspan="2" class="energy lng">LNG</td>
+                                                <td rowspan="2" class="energy02 tosigas">都市ガス<br /><span class="sub">(13A)</span></td>
+                                                <td rowspan="2" class="amount b_btm_dot_reset">m<sup class="normal_sup">3</sup></td>
+                                                                                        <td class="grade">高位</td>
+                                            <td class="month_rate "       >10</td>
+                                            <td class="number_equality "  >1,222</td>
+                                            <td class="number_quantity "  >6</td>
+                                            <td class="number_difference  red">-2</td>
+                                        </tr>
+                                        <tr class="">
+                                            <td class="grade">低位</td>
+                                                                                        <td class="month_rate">11</td>
+                                            <td class="number_equality">1,111</td>
+                                            <td class="number_quantity">6</td>
+                                                                                        <td class="number_difference red">-2</td>
+                                        </tr>
+                                                                                <tr id="8" class="b_btm_dot  ">
+                                                                                            <td rowspan="2" class="energy denryoku">電力</td>
+                                                <td rowspan="2" class="energy02 kateiyou">家庭用</td>
+                                                <td rowspan="2" class="amount">kWh</td>
+                                                                                        <td class="grade">高位</td>
+                                            <td class="month_rate "       >116</td>
+                                            <td class="number_equality "  >105</td>
+                                            <td class="number_quantity "  >15</td>
+                                            <td class="number_difference  ">7</td>
+                                        </tr>
+                                        <tr class="">
+                                            <td class="grade">低位</td>
+                                                                                        <td class="month_rate">109</td>
+                                            <td class="number_equality">112</td>
+                                            <td class="number_quantity">14</td>
+                                                                                        <td class="number_difference ">6</td>
+                                        </tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                        <div id="result_year">
+                                <!-- **************** print ****************-->
+                                                                    <p class="print_result_month">年間の場合</p>
+                                                                <!-- **************** print ****************-->
+
+                                <div class="table10" data-simplebar data-simplebar-auto-hide="false">
+                                    <table width="0" border="0">
+                                        <tr class="ttl">
+                                            <td colspan="4" rowspan="2">燃料</td>
+                                            <td rowspan="2">年間<span class="break">使用量</span></td>
+                                            <td rowspan="2">同等<span class="break">単価</span><span class="sub">（税抜）</span></td>
+                                            <td colspan="2">CO<sub class="normal_sub">2</sub></td>
+                                        </tr>
+                                        <tr class="ttl">
+                                            <td>量</td>
+                                            <td>差</td>
+                                        </tr>
+
+                                                                                <tr id="1" class="b_btm_dot  ">
+                                                                                            <td rowspan="6" class="energy lpgas">LPガス</td>
+                                                <td class="energy02 propane" rowspan="4">プロパン</td>
+                                                <td class="amount b_btm_dot_reset" rowspan="2">kg</td>
+                                                                                        <td class="grade">高位</td>
+                                            <td class="month_rate "       >100</td>
+                                            <td class="number_equality "  >1,467</td>
+                                            <td class="number_quantity "  >82</td>
+                                            <td class="number_difference  red">-14</td>
+                                        </tr>
+                                        <tr class="">
+                                            <td class="grade">低位</td>
+                                                                                        <td class="month_rate">101</td>
+                                            <td class="number_equality">1,452</td>
+                                            <td class="number_quantity">83</td>
+                                                                                        <td class="number_difference red">-13</td>
+                                        </tr>
+                                                                                <tr id="2" class="b_btm_dot  ">
+                                                                                            <td rowspan="2" class="b_btm_dot_reset">m<sup class="normal_sup">3</sup><br /><span class="sub">(低圧)</span></td>
+                                                                                        <td class="grade">高位</td>
+                                            <td class="month_rate "       >50</td>
+                                            <td class="number_equality "  >2,933</td>
+                                            <td class="number_quantity "  >81</td>
+                                            <td class="number_difference  red">-15</td>
+                                        </tr>
+                                        <tr class="">
+                                            <td class="grade">低位</td>
+                                                                                        <td class="month_rate">51</td>
+                                            <td class="number_equality">2,876</td>
+                                            <td class="number_quantity">83</td>
+                                                                                        <td class="number_difference red">-13</td>
+                                        </tr>
+                                                                                <tr id="3" class="b_btm_dot b_btm_dot_reset ">
+                                                                                            <td rowspan="2" class="energy02 butane">ブタン</td>
+                                                <td rowspan="2" class="amount b_btm_dot_reset">kg</td>
+                                                                                        <td class="grade">高位</td>
+                                            <td class="month_rate "       >101</td>
+                                            <td class="number_equality "  >1,452</td>
+                                            <td class="number_quantity "  >83</td>
+                                            <td class="number_difference  red">-13</td>
+                                        </tr>
+                                        <tr class="">
+                                            <td class="grade">低位</td>
+                                                                                        <td class="month_rate">103</td>
+                                            <td class="number_equality">1,424</td>
+                                            <td class="number_quantity">85</td>
+                                                                                        <td class="number_difference red">-11</td>
+                                        </tr>
+                                                                                <tr id="4" class="b_btm_dot  ">
+                                                                                            <td class="energy sekiyu" rowspan="6">石油</td>
+                                                <td rowspan="2" class="energy02 toyu">灯油</td>
+                                                <td rowspan="2" class="amount b_btm_dot_reset">L</td>
+                                                                                        <td class="grade">高位</td>
+                                            <td class="month_rate "       >137</td>
+                                            <td class="number_equality "  >1,070</td>
+                                            <td class="number_quantity "  >94</td>
+                                            <td class="number_difference  red">-2</td>
+                                        </tr>
+                                        <tr class="">
+                                            <td class="grade">低位</td>
+                                                                                        <td class="month_rate">138</td>
+                                            <td class="number_equality">1,063</td>
+                                            <td class="number_quantity">94</td>
+                                                                                        <td class="number_difference red">-2</td>
+                                        </tr>
+                                                                                <tr id="5" class="b_btm_dot  bg_red">
+                                                                                            <td rowspan="2" class="energy02 keiyu">軽油</td>
+                                                <td rowspan="2" class="amount b_btm_dot_reset">L</td>
+                                                                                        <td class="grade">高位</td>
+                                            <td class="month_rate b_btm_dot_reset"       rowspan="2">132</td>
+                                            <td class="number_equality b_btm_dot_reset"  rowspan="2">1,111</td>
+                                            <td class="number_quantity b_btm_dot_reset"  rowspan="2">96</td>
+                                            <td class="number_difference b_btm_dot_reset ">-</td>
+                                        </tr>
+                                        <tr class="bg_red">
+                                            <td class="grade">低位</td>
+                                                                                        <td class="number_difference ">-</td>
+                                        </tr>
+                                                                                <tr id="6" class="b_btm_dot  ">
+                                                                                            <td rowspan="2" class="energy02 ajyuyu">A重油</td>
+                                                <td rowspan="2" class="amount b_btm_dot_reset">L</td>
+                                                                                        <td class="grade">高位</td>
+                                            <td class="month_rate "       >129</td>
+                                            <td class="number_equality "  >1,137</td>
+                                            <td class="number_quantity "  >97</td>
+                                            <td class="number_difference  ">1</td>
+                                        </tr>
+                                        <tr class="">
+                                            <td class="grade">低位</td>
+                                                                                        <td class="month_rate">128</td>
+                                            <td class="number_equality">1,146</td>
+                                            <td class="number_quantity">96</td>
+                                                                                        <td class="number_difference ">0</td>
+                                        </tr>
+                                                                                <tr id="7" class="b_btm_dot  ">
+                                                                                            <td rowspan="2" class="energy lng">LNG</td>
+                                                <td rowspan="2" class="energy02 tosigas">都市ガス<br /><span class="sub">(13A)</span></td>
+                                                <td rowspan="2" class="amount b_btm_dot_reset">m<sup class="normal_sup">3</sup></td>
+                                                                                        <td class="grade">高位</td>
+                                            <td class="month_rate "       >126</td>
+                                            <td class="number_equality "  >1,164</td>
+                                            <td class="number_quantity "  >70</td>
+                                            <td class="number_difference  red">-26</td>
+                                        </tr>
+                                        <tr class="">
+                                            <td class="grade">低位</td>
+                                                                                        <td class="month_rate">129</td>
+                                            <td class="number_equality">1,137</td>
+                                            <td class="number_quantity">72</td>
+                                                                                        <td class="number_difference red">-24</td>
+                                        </tr>
+                                                                                <tr id="8" class="b_btm_dot  ">
+                                                                                            <td rowspan="2" class="energy denryoku">電力</td>
+                                                <td rowspan="2" class="energy02 kateiyou">家庭用</td>
+                                                <td rowspan="2" class="amount">kWh</td>
+                                                                                        <td class="grade">高位</td>
+                                            <td class="month_rate "       >1,393</td>
+                                            <td class="number_equality "  >105</td>
+                                            <td class="number_quantity "  >182</td>
+                                            <td class="number_difference  ">86</td>
+                                        </tr>
+                                        <tr class="">
+                                            <td class="grade">低位</td>
+                                                                                        <td class="month_rate">1,310</td>
+                                            <td class="number_equality">112</td>
+                                            <td class="number_quantity">171</td>
+                                                                                        <td class="number_difference ">75</td>
+                                        </tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                        <!--*********End result_month*********-->
+                        </div>
+                        <!--********* ui-tab *********-->
+
+
+                        <p class="caption">※小数点は第1位で四捨五入しております。</p>
+                        <p class="btn_gray"><a href="nenten_about.html" target="_blank">※使用する係数等、計算方法について</a></p>
+                    </div>
+                    <!-- END-energyz_inner -->
+                </div>
+                <!-- END-energyz -->
+
+
+                <div class="btn_box">
+                    <p class="btn_back"><a href="index.html?mode=form&back=1"><img src="images/btn_back.png" width="197" height="49" alt="入力画面に戻る" class="hover" /></a></p>
+                    <p class="btn_print"><a href="javascript:void(0);" onclick="window.print(); return false;"><img src="images/btn_print.png" width="308" height="49" alt="印刷する" class="hover" /></a></p>
+                </div>
+
+            </div>
+            <!-- END-left -->
+
+
+
+            <!-- Start-right -->
+            <div class="right">
+    <div class="side_navi">
+        <h1><span>燃転コンテンツ</span></h1>
+        <ul>
+            <li class="first"><a href="../subsidy.html" target="_self">補助金情報</a></li>
+            <li class="first"><a href="../example/index.html" target="_self">燃転事例紹介</a></li>
+            <li class="first_active"><a href="index.html" target="_self">燃転電卓</a></li>
+			<li class="first"><a href="/nenten/nenten.html" target="_self">NenTenキャンペーン</a></li>
+            <li class="first"><a href="../ecoten.html" target="_self">エコTENキャンペーン</a></li>
+			<li class="first"><a href="/nenten/torikumi/index.html" target="_self">燃転活動への取り組み</a></li>
+            <li class="first"><a href="/nenten/sales/index.html" target="_self">注目　営業活動事例</a></li>
+	</ul>
+    </div>
+</div>            <!-- END-right -->
+
+
+
+        </div>
+        <!-- ****************END-inner**************** -->
+
+        <!-- =================== footer SSI ====================== -->
+        <!-- Start-footer -->
+        <div class="footer">
+<div class="inner">
+<span class="logo_jge"><img src="/common/images/logo_jge_footer.gif" alt="JGE 株式会社ジャパンガスエナジ―" /></span>
+<span class="privacy_policy"><a class="normal_link" href="http://www.j-gasenergy.co.jp/policy/index.php" target="_blank">プライバシーポリシー</a></span>
+<span class="logo_copy"><img src="/common/images/logo_copyright.gif" alt="All Rights Reserved by JAPAN GAS ENERGY CORPORATION" /></span>
+</div>
+</div>
+
+<p id="page-top"><a href="#page_top"><img src="/common/images/btn_top_off.png" width="55" height="55" alt="TOP" /></a></p>
+<script type="text/javascript" src="/lib/common.js"></script>        <!-- =================== /footer SSI ====================== -->
+
+    </div>
+    <!-- ****************END-main_box**************** -->
+
+
+</div>
+<!--END-wrapper-->
+
+</body>
+</html>

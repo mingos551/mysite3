@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>計算結果</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        .container {
+            max-width: 800px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>計算結果</h1>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th rowspan="2">燃料</th>
+                    <th rowspan="2">総発熱量</th>
+                    <th rowspan="2">月間使用量</th>
+                    <th rowspan="2">同等単価<br>（税抜）</th>
+                    <th colspan="2">CO2</th>
+                </tr>
+                <tr>
+                    <th>量</th>
+                    <th>差</th>
+                </tr>
+            </thead>
+            <tbody id="results-body">
+            </tbody>
+        </table>
+        <a href="index.html" class="btn btn-primary">戻る</a>
+    </div>
+
+    <script src="results.js"></script>
+</body>
+</html>

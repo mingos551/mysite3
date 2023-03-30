@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>燃転電卓 - 計算方法について</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>燃転電卓</h1>
+        <h2>使用する係数等、計算方法について</h2>
+        <p>「燃転電卓」の計算は、現在ご利用中のエネルギーの使用量から発熱量を算出し、各エネルギー毎に同等発熱量を得るために必要な使用量を求めたものです。各係数等は下記のものを使用しております。</p>
+        <table class="table" id="fuel-table">
+            <thead>
+                <tr>
+                    <th>燃料</th>
+                    <th>単位総発熱量</th>
+                    <th>CO2係数</th>
+                    <th>備考</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <script src="app.js"></script>
+    <script>
+        $(document).ready(function() {
+            populateTable();
+        });
+    </script>
+</body>
+</html>

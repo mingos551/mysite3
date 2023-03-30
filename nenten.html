@@ -1,0 +1,358 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="ja" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type"  content="text/css" />
+<link rel="shortcut icon" href="/icon/favicon.ico">
+<title>株式会社ジャパンガスエナジー｜会員サイト｜燃転コンテンツ｜燃転電卓</title>
+<meta name="ROBOTS" CONTENT="ALL">
+<meta name="description" content="輸入、販売等の事業概要、プロパン・ブタン・オートガスの用途やLPガス車紹介。">
+<meta name="keywords" content="LPガス,lp,LPG,ガス,東京ガス,機器,ジャパンガスエナジー,ガスコンロ,燃料電池,LPG車,プロパン,ブタン,価格,料金,高圧,業界,ニュース,CP価格,JGE">
+<meta name="copyright" content="All Rights Reserved by JAPAN GAS ENERGY CORPORATION JGE" />
+<meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1" />
+<link rel="stylesheet" media="all" href="/common/css/basic.css" type="text/css" id="style_type" />
+
+
+<script type="text/javascript" src="/common/js/jquery.191.js"></script>
+<script type="text/javascript" src="/common/js/smoothrollover.js"></script>
+<script type="text/javascript" src="/common/js/hover.js"></script>
+<script type="text/javascript" src="/common/js/top.js"></script>
+<script type="text/javascript" src="/common/js/jqueryAutoHeight.js"></script>
+<script type="text/javascript" src="/common/js/jquery.js"></script>
+<script type="text/javascript" src="/common/js/mobile_switch.js"></script>
+<script type="text/javascript" src="/sp_common/js/smart_jquery.js"></script>
+<script type="text/javascript" src="/sp_common/js/jquery.mobile-menu.js"></script>
+<script type="text/javascript" src="/sp_common/js/simplebar.js"></script>
+<script type="text/javascript" src="https://polyfill.io/v3/polyfill.min.js?features=String.prototype.startsWith"></script>
+<script type="text/javascript" src="https://polyfill.io/v3/polyfill.min.js?features=Element.prototype.remove"></script>
+<link rel="stylesheet" media="all" href="/sp_common/css/simplebar.css" type="text/css">
+
+<script>
+        
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-61631909-1', 'auto');
+  ga('send', 'pageview');
+        
+
+</script>
+<script type="text/javascript" src="/common/js/ga_event.js"></script>
+    <style type="text/css">
+        
+        .error {
+            color:#FF0000;
+            text-align:center;
+            font-size:12pt;
+            font-weight:bold;
+        }
+        .error_title {
+            color:#FF0000;
+            text-align:center;
+            font-size:14pt;
+            font-weight:bold;
+        }
+        
+    </style>
+    <script type="text/javascript">
+        
+        $(function(){
+           $('input[type="radio"]').unwrap();
+
+            // 数字のみ入力可能にする
+            $("#energy_amount,#energy_unit_price").attr('type','tel');
+
+            var $energy_period = $(".energy_period");
+            var $energy_kind   = $("#energy_kind");
+            var $energy_unit   = $("#energy_unit");
+            var $energy_unit1  = $("#energy_unit1");
+            var $energy_unit2  = $("#energy_unit2");
+            var $energy_amount = $("#energy_amount");
+
+            var is_energy_kind_oil = function() {
+                return ($energy_kind.val() == '4' || $energy_kind.val() == '5' || $energy_kind.val() == '6');
+            };
+
+            var change_energy_unit = function(){
+                if(is_energy_kind_oil()) {
+                    $energy_unit.show();
+                } else {
+                    $energy_unit.hide();
+                }
+            };
+
+            var update_energy_amount_maxlength = function(){
+                var checked_val = $energy_period.filter(':checked').val();
+                // 月間
+                if(checked_val==1) {
+                    if(is_energy_kind_oil() && $energy_unit.val()=='2') {
+                        $energy_amount.attr('maxlength',4);
+                    } else {
+                        $energy_amount.attr('maxlength',6);
+                    }
+                }
+                else {
+                    if(is_energy_kind_oil() && $energy_unit.val()=='2') {
+                        $energy_amount.attr('maxlength',7);
+                    } else {
+                        $energy_amount.attr('maxlength',9);
+                    }
+                }
+            };
+
+            $energy_kind.on('change',function(){
+                $energy_amount.val('');
+                change_energy_unit();
+                update_energy_amount_maxlength();
+            });
+            change_energy_unit();
+
+            $energy_period.on('change',function(){
+                $energy_amount.val('');
+                update_energy_amount_maxlength();
+            });
+            $energy_unit.on('change',function(){
+                $energy_amount.val('');
+                update_energy_amount_maxlength();
+            });
+            update_energy_amount_maxlength();
+        });
+        function fnCalculate() {
+            document.fm.submit();
+        }
+        
+    </script>
+</head>
+
+
+<body id="page_top">
+<!-- Start-wrapper -->
+<div id="wrapper">
+
+    <!-- =================== header SSI ====================== -->
+    <!-- ****************Start-header**************** -->
+    <div class="header">
+<div class="inner">
+<div class="left">
+<div><img src="/common/images/logo_cruse.gif" width="178" height="53" alt="CRUSE" /></div>
+<div class="text_partner"><img src="/common/images/test_partner.png" width="345" height="31" alt="最強のパートナーシップを目指して" /></div>
+</div>
+<div class="right">
+<p class="link_web"><a href="http://www.j-gasenergy.co.jp/" target="_blank" class="normal_link">株式会社ジャパンガスエナジー<br />WEBサイトはこちら</a></p>
+<p class="btn_logout"><a href="/logout.php"><img src="/common/images/btn_logout.png" width="66" height="32" alt="ログアウト" class="hover" /></a></p>
+<p class="logo_jge"><img src="/common/images/logo_jge.gif" width="318" height="42" alt="株式会社ジャパンガスエナジー" /></p>
+</div>
+</div>
+</div>    <!-- ****************END-header**************** -->
+    <!-- =================== /header SSI ====================== -->
+
+    <!-- =================== gnavi SSI ====================== -->
+    <!-- ****************Start-gnavi**************** -->
+    <div class="gnavi">
+<div class="inner">
+<ul>
+<li><a href="/index.html" target="_self"><img src="/common/images/gnavi01_off.png" alt="HOME" width="192" height="57" /></a></li>
+<li><a href="/report/index.html" target="_self"><img src="/common/images/gnavi02_off.png" width="192" height="57" alt="国際レポート" /></a></li>
+<li><a href="/training/index.html" target="_self"><img src="/common/images/gnavi03_off.png" width="190" height="57" alt="研修会情報" /></a></li>
+<li><a href="/nenten/index.html" target="_self"><img src="/common/images/gnavi04_on.png" width="193" height="57" alt="燃転コンテンツ" /></a></li>
+<li><a href="/information/index.html" target="_self"><img src="/common/images/gnavi05_off.png" alt="注目情報" width="193" height="57" /></a></li>
+</ul>
+</div>
+</div>    <!-- ****************END-gnavi**************** -->
+
+    <!-- =================== /gnavi SSI ====================== -->
+
+    <!-- =================== smart_header SSI ====================== -->
+    <!-- ****************Start-smart header**************** -->
+    <div class="smart_header">
+<span class="logo"><a href="/"><img src="/sp_common/images/logo.png" alt="CRUSE 最強のパートナーシップを目指して 株式会社ジャパンガスエナジー" /></a></span>
+<span class="menu" id="mobile-bar"></span>
+
+<div id="main-nav">
+<div id="nav_box">
+
+<ul class="accordion">
+<li>
+    <p class="ttl_report"><span>国際レポート</span></p>
+    <!-- ajaxでここに年度リストが埋め込まれる-->
+
+</li>
+<li>
+    <p class="ttl_training"><span>研修会情報</span></p>
+    <ul>
+    <li><a href="/training/index.html">研修プログラム一覧</a></li>
+    <li><a href="/training/report2022/index.html">研修会開催レポート</a></li>
+	<li><a href="/training/report2022/index.html">2022年度 研修会</a></li>
+	<li><a href="/training/report2021/index.html">2021年度 研修会</a></li>
+	<li><a href="/training/report2019/index.html">2019年度 研修会</a></li>
+	<li><a href="/training/report2018/index.html">2018年度 研修会</a></li>
+	<li><a href="/training/report2017/index.html">2017年度以前の研修会</a></li>
+	</ul>
+</li>
+<li>
+    <p class="ttl_nenten"><span>燃転コンテンツ</span></p>
+    <ul>
+    <li><a href="/nenten/subsidy.html">補助金情報</a></li>
+    <li><a href="/nenten/subsidy_movie.html">基調講演「補助金活用事例」</a></li>
+    <li><a href="/nenten/generator_movie.html">非常用発電機実機紹介</a></li>
+    <li><a href="/nenten/calculator/index.html">燃転電卓</a></li>
+    <li><a href="/nenten/nenten.html">NenTenキャンペーン</a></li>
+    <li><a href="/nenten/ecoten.html">エコTENキャンペーン</a></li>
+    <li><a href="/nenten/example/index.html">燃転事例紹介</a></li>
+    <li><a href="/nenten/torikumi/index.html">燃転・営業活動への取り組み</a></li>
+    <!-- <li><a href="/nenten/sales/index.html">営業活動事例</a></li> -->
+	</ul>
+</li>
+<li class="ttl_information">
+	<a href="/information/index.html">注目情報</a>
+</li>
+<li class="ttl_calculator">
+	<a href="/nenten/calculator/index.html">燃転電卓</a>
+</li>
+</ul>
+
+<p id="btn_logout_sp"><a href="/logout.php"><img src="/sp_common/images/btn_logout.png" width="178" height="50" alt="ログアウト" /></a></p>
+
+<p id="build_menu_close" class="close_btn"><img src="/sp_common/images/btn_close.png" alt="close" /></p>
+
+</div>
+</div>
+</div>    <!-- ****************END-smart header**************** -->
+
+    <!-- =================== /smart_header SSI ====================== -->
+
+
+    <!-- ****************Start-main_box**************** -->
+    <div class="main_box second">
+
+        <!--**************** Start-inner**************** -->
+        <div class="inner">
+
+            <!-- Start-pankuz -->
+            <p class="pankuz"><a href="../../index.html">HOME&nbsp;</a>&gt;&nbsp;<a href="../index.html">燃転コンテンツ</a>&nbsp;&gt;&nbsp;燃転電卓</p>
+            <!-- /pankuz -->
+
+            <!-- Start-left -->
+            <div class="left">
+                <h1 class="normal_long"><span class="bg_top"></span><span>燃転電卓</span></h1>
+
+                <form action="?" method="post" name="fm" >
+                    <input type="hidden" name="mode" value="form" />
+                <div class="inner_box calculator">
+                    <p class="lead">現在お客さまがお使いの「燃料」、「使用量」、「単価」を入力すると、各エネルギーの単価、CO<sub class="normal_sub">2</sub>排出量がカンタンに計算することができます。ぜひ燃料検討の一助としてご利用ください。</p>
+
+                    
+
+                    <div class="box_calculator">
+                        <p class="bg_ttl_top"></p>
+                        <div class="box">
+                            <p class="ttl_first_step">まずは、現在ご利用中のエネルギーを選択してください。</p>
+
+                            <div class="box_inner">
+                                <div class="select_energy">
+                                    <span class="focus_box"><select id="energy_kind" size="" class="energy_kind" style="" tabindex="1" name="energy_kind">
+	<option value="">エネルギーをお選びください</option>
+	<option value="1">プロパン（MJ/kg）</option>
+	<option value="2">プロパン（MJ/ｍ3 低圧）</option>
+	<option value="3">ブタン</option>
+	<option value="4">灯油</option>
+	<option value="5" selected="selected">軽油</option>
+	<option value="6">A重油</option>
+	<option value="7">都市ガス（13A）</option>
+	<option value="8">電力 家庭用</option>
+</select></span>
+                                </div>
+
+                                <p class="img_nenten_next"><img src="images/img_nenten_next.png" alt="" width="95" height="23" /></p>
+                            </div>
+                        </div>
+
+
+                        <div class="box second_step">
+                            <p class="ttl_second_step">選択したエネルギーのご使用量、単価をご入力ください。</p>
+
+                            <!--box_inner-->
+                            <div class="box_inner">
+                                <div class="input_numbers">
+
+                                    <div class="radio_box">
+                                        <p>
+                                            <span class="energy_period" ><input id="energy_period_1" class="energy_period" tabindex="2" value="1" type="radio" name="energy_period" checked="checked" /><label for="energy_period_1" class="radio">月間使用量で入力</label></span></p><p><span class="energy_period" ><input id="energy_period_2" class="energy_period" tabindex="3" value="2" type="radio" name="energy_period" /><label for="energy_period_2" class="radio">年間使用量で入力</label></span>
+                                        </p>
+                                    </div>
+
+                                    <div class="amount">
+                                        <p class="ttl">使用量</p>
+                                        <p class="input">
+                                            <input id="energy_amount" size="" class="ime_off" style="" tabindex="4" name="energy_amount" type="text" value="11" />
+                                        </p>
+                                        <p class="ttl02">
+                                            <span class="focus_box"><select id="energy_unit" size="" class="energy_unit" style="" maxlength="9" tabindex="5" name="energy_unit">
+	<option value="1" selected="selected">L</option>
+	<option value="2">KL</option>
+</select></span>
+                                        </p>
+                                    </div>
+                                    <div class="unit">
+                                        <p class="ttl">単価</p>
+                                        <p class="input"><input id="energy_unit_price" size="" class="ime_off" style="" maxlength="7" tabindex="6" name="energy_unit_price" type="text" value="1111" /></p>
+                                        <p class="ttl02">円(税抜)</p>
+                                    </div>
+                                </div>
+                                <p class="sub">※単価は未入力でも計算できます。その場合、他エネルギーの同等単価は計算されません。</p>
+                            </div>
+                            <!-- END box_inner-->
+                            <input type="hidden" name="BTNG[send]" value="1" />
+                            <div class="btn_calculator"><span><a href="javascript:void(0)" onclick="fnCalculate()"><img src="images/btn_calculator.png" width="308" height="49" alt="計算する" class="hover" /></a></span></div>
+
+                        </div>
+                        <p class="bg_btm"></p>
+
+                    </div>
+                </div>
+                </form>
+
+            </div>
+            <!-- END-left -->
+
+
+            <!-- Start-right -->
+            <div class="right">
+    <div class="side_navi">
+        <h1><span>燃転コンテンツ</span></h1>
+        <ul>
+            <li class="first"><a href="../subsidy.html" target="_self">補助金情報</a></li>
+            <li class="first"><a href="../example/index.html" target="_self">燃転事例紹介</a></li>
+            <li class="first_active"><a href="index.html" target="_self">燃転電卓</a></li>
+			<li class="first"><a href="/nenten/nenten.html" target="_self">NenTenキャンペーン</a></li>
+            <li class="first"><a href="../ecoten.html" target="_self">エコTENキャンペーン</a></li>
+			<li class="first"><a href="/nenten/torikumi/index.html" target="_self">燃転活動への取り組み</a></li>
+            <li class="first"><a href="/nenten/sales/index.html" target="_self">注目　営業活動事例</a></li>
+	</ul>
+    </div>
+</div>            <!-- END-right -->
+        </div>
+        <!-- ****************END-inner**************** -->
+
+        <!-- =================== footer SSI ====================== -->
+        <!-- Start-footer -->
+        <div class="footer">
+
+</div>
+
+<p id="page-top"><a href="#page_top"><img src="/common/images/btn_top_off.png" width="55" height="55" alt="TOP" /></a></p>
+<script type="text/javascript" src="/lib/common.js"></script>        <!-- =================== /footer SSI ====================== -->
+
+    </div>
+    <!-- ****************END-main_box**************** -->
+
+
+</div>
+<!--END-wrapper-->
+
+</body>
+</html>
