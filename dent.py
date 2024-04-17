@@ -1,37 +1,12 @@
 import pandas as pd
 import streamlit as st
-import openai
 import os
 
-openai.organization = "org-pIQFshReeZ4tEMfF1TiwvWT1"
-openai.api_key = os.getenv("OPENAI_API_KEY")
 
 
 
 
 
-def Ask_ChatGPT(message):
-    
-    # 応答設定
-    completion = openai.ChatCompletion.create(
-                 model    = "gpt-3.5-turbo-0301",     # モデルを選択
-                 messages = [{
-                            "role":"system","content":"Consultants on utility costs",
-                            "role":"assistant","content":message,   # メッセージ 
-
-                            }],
-    
-                 max_tokens  = 1024,             # 生成する文章の最大単語数
-                 n           = 1,                # いくつの返答を生成するか
-                 stop        = None,             # 指定した単語が出現した場合、文章生成を打ち切る
-                 temperature = 0.7,              # 出力する単語のランダム性（0から2の範囲） 0であれば毎回返答内容固定
-    )
-    
-    # 応答
-    response = completion.choices[0].message.content
-    
-    # 応答内容出力
-    return response
 
 
 def find_key_by_name(fuel_data, name):
@@ -380,12 +355,5 @@ if st.button('計算する'):
         # 結果を表示
         st.write(fuel_df)
     
-with st.expander('AIアッチ君になんでも質問してみよう!!'):
-    input_text = st.text_input("質問を入力してください:")
-    if st.button("送信"):
-        if input_text:
-            response = Ask_ChatGPT(input_text)
-            st.write("アッチ君がお答えするよ!!:", response)
-    else:
-        st.write("質問を入力してください。")
+
 
